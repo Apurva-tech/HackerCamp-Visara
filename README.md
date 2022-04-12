@@ -2,7 +2,23 @@
 <h3 style="text-align: center;">Using the power of data science and artificial intelligence in the healthcare industry.
 </h3>
 
+
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Apurva-tech/HackerCamp-Visara?logo=github&style=for-the-badge)](https://github.com/Apurva-tech/HackerCamp-Visara) 
+[![GitHub last commit](https://img.shields.io/github/last-commit/Apurva-tech/HackerCamp-Visara?style=for-the-badge&logo=git)](https://github.com/Apurva-tech/HackerCamp-Visara) 
+[![GitHub stars](https://img.shields.io/github/stars/Apurva-tech/HackerCamp-Visara?style=for-the-badge)](https://github.com/Apurva-tech/HackerCamp-Visara/stargazers) 
+[![My stars](https://img.shields.io/github/stars/Apurva-tech?affiliations=OWNER%2CCOLLABORATOR&style=for-the-badge&label=My%20stars)](https://github.com/Apurva-tech/HackerCamp-Visara/stargazers) 
+[![GitHub forks](https://img.shields.io/github/forks/Apurva-tech/HackerCamp-Visara?style=for-the-badge&logo=git)](https://github.com/Apurva-tech/HackerCamp-Visara/network)
+[![Code size](https://img.shields.io/github/languages/code-size/Apurva-tech/HackerCamp-Visara?style=for-the-badge)](https://github.com/Apurva-tech/HackerCamp-Visara)
+[![Languages](https://img.shields.io/github/languages/count/Apurva-tech/HackerCamp-Visara?style=for-the-badge)](https://github.com/Apurva-tech/HackerCamp-Visara)
+[![Top](https://img.shields.io/github/languages/top/Apurva-tech/HackerCamp-Visara?style=for-the-badge&label=Top%20Languages)](https://github.com/Apurva-tech/HackerCamp-Visara)
+[![Issues](https://img.shields.io/github/issues/Apurva-tech/HackerCamp-Visara?style=for-the-badge&label=Issues)](https://github.com/Apurva-tech/HackerCamp-Visara)
+[![Watchers](	https://img.shields.io/github/watchers/Apurva-tech/HackerCamp-Visara?label=Watch&style=for-the-badge)](https://github.com/Apurva-tech/HackerCamp-Visara/) 
+
+
 # Inspiration ✨
+
+![image](https://user-images.githubusercontent.com/59837325/163002955-973c1f6d-fd3e-42fe-a429-ed05d19bb361.png)
+
 
 Diabetes is a devastating health situation. Over 84% of sufferers are unaware that they've diabetes, and that is largely due to the fact there lacks a goal evaluation device for computerized detection. Diabetic Retinopathy is a eye situation that could purpose imaginative and prescient loss and blindness in human beings who've diabetes. Diabetic Retinopathy should be identified quickly and accurately, however, the inconsistency among clinicians exacerbates the cutting-edge negative remedy of DR. Currently, detecting DR is a totally time-ingesting task, which calls for an educated clinician to assess the retina. In addition to this, diagnosing sufferers may be extraordinarily inconsistent among ophthalmologists and our severity predictor guarantees a goal and brief evaluation of DR. To counter the adverse consequences of diabetic retinopathy and absence of consistency from clinician diagnosis, we present to you, the Visara.
 
@@ -14,6 +30,8 @@ Our Visara aims to bring a solution which can help people take necessary prevent
 For new users, our YogaBot asks them a few generic questions regarding their medical history and recommends Yoga asanas to boost their health and immunity. For registered users, we keep a record of their previous asanas and their improvement to suggest some new routines. Our bot then acts as a personal trainer, records the body structure and notifies if the body is upheld correctly. 
 
 # Key features 💡
+
+![image](https://user-images.githubusercontent.com/59837325/163003116-45cc8613-c322-4937-94cd-c8a0ff6839bb.png)
 
 Our YogaBot is a recommendation feature which analyzes the user’s health to recommend and teach Asanas to boost their health structure. It acts as a personal trainer checking the posture of the user while performing the Asanas.
 
@@ -30,13 +48,8 @@ Diabetic Retinopathy (DR) severity prediction, blindness time prediction, and a 
 
 # Tech Stack 📚
 
-- HTML, CSS, JavaScript
-- Python
-- Tensorflow
-- Flask
-- OpenCV
-- Natural Language Processing
-- CNN
+![image](https://user-images.githubusercontent.com/59837325/163002621-11053768-1091-4a80-9a66-f3f9575ddbf0.png)
+
 
 # Future scope 📈
 
