@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Visara-Your Health Buddy</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/icon/favicon.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome-all.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <header>
+            <div class="header-area header-transparent">
+                <div class="main-header header-sticky">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="menu-wrapper d-flex align-items-center justify-content-between">
+                                    <div class="left-content d-flex align-items-center">
+                                        <div class="logo mr-30">
+                                            <a href="#  ">
+                                                <img src="{{ url_for('static', filename='img/logo/logo.png') }}" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="main-menu d-none d-lg-block">
+                                            <nav>
+                                                <ul id="navigation">
+                                                    <li>
+                                                        <a href="#"></a>
+                                                    </li>
+                                                    <li></li>
+                                                    <li>
+                                                        <a href="#contact"></a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                        <h1 style="position: absolute; left: 33%; top:20px">Patient Dashboard</h1>
+                                    </div>
+                                    <div class="buttons">
+                                        <ul>
+                                            <li class="button-header" style="margin-right: 15px">
+                                                <a href="#" class="header-btn2 border-btn2">
+                                                    {{name}}
+                                                </a>
+                                            </li>
+                                            <li class="button-header">
+                                                <a href="/" class="header-btn2 border-btn2">
+                                                    Log Out
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="slider-area ">
+            <div class="single-sliders slider-height   d-flex align-items-center">
+                <div class="container position-relative">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="single-cat text-center mb-50">
+                                    <div class="cat-icon">
+                                        <img style="height:100px" src="{{ url_for('static', filename='img/icon/eye.png') }}" alt="">
+                                    </div>
+                                    <div class="cat-cap">
+                                        <h5>
+                                            <a href="#" style="font-weight: 600;">Diabetic Retinography</a>
+                                        </h5>
+                                        <p>Prediction and Intuitive Visualisations for Diabetic Retinography.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="single-cat text-center mb-50">
+                                    <div class="cat-icon">
+                                        <img style="height:100px" src="{{ url_for('static', filename='img/icon/heart-rate.png') }}" alt="">
+                                    </div>
+                                    <div class="cat-cap">
+                                        <h5>
+                                            <form action="/recommend" method="post" style="top:100px;position:absolute">
+                                                <input type="text" name="name" value="{{name}}" style="display: none;">
+                                                <button style="font-weight: 600; position: absolute; width: 250px; color: #232F55; border: none; background-color: rgba(255, 255, 255, 0); cursor: pointer;">Yoga Bot</button>
+                                            </form>
+                                            <a href="/posebots" style="visibility: hidden;">Yoga Bot</a>
+                                        </h5>
+                                        <p>Your personalised Yoga bot for pose detection and tracking of your exercises.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="single-cat text-center mb-50">
+                                    <div class="cat-icon">
+                                        <img style="height:100px" src="{{ url_for('static', filename='img/icon/caduceus.png') }}" alt="">
+                                    </div>
+                                    <div class="cat-cap">
+                                        <h5>
+                                            <form action="/patientreport" method="post" style="top:100px;position:absolute">
+                                                <input type="text" name="name" value="{{name}}" style="display: none;">
+                                                <button style="font-weight: 600; position: absolute; width: 250px; color: #232F55; border: none; background-color: rgba(255, 255, 255, 0); cursor: pointer;">Doctor Consultation</button>
+                                            </form>
+                                            <a href="/" style="visibility: hidden;">Doctor Consultation</a>
+                                        </h5>
+                                        <p>A platform to view the personalised recommendations of the doctors.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="single-cat text-center mb-50">
+                                    <div class="cat-icon">
+                                        <img style="height:100px" src="{{ url_for('static', filename='img/icon/medical-report.png') }}" alt="">
+                                    </div>
+                                    <div class="cat-cap">
+                                        <h5>
+                                            <!-- <form action="/summarise" method="post" style="top:100px;position:absolute">
+                                                <input type="text" name="name" value="{{name}}" style="display: none;">
+                                                <button style="position: absolute; top:-38px; width: 250px; color: #232F55; border: none; background-color: rgba(255, 255, 255, 0); cursor: pointer;">Report Summariser</button>
+                                            </form> -->
+                                            <a href="/summarise" style="" >Report Summariser</a>
+                                        </h5>
+                                        <p>Medical Reports can perplex common people, this feature simplifies the problem.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="{{ url_for('static', filename='js/vendor/jquery-1.12.4.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </body>
+</html>

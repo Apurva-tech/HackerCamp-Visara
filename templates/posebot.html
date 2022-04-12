@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Visara-Your Health Buddy</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/icon/favicon.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome-all.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <header>
+            <div class="header-area header-transparent">
+                <div class="main-header header-sticky">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="menu-wrapper d-flex align-items-center justify-content-between">
+                                    <div class="left-content d-flex align-items-center">
+                                        <div class="logo mr-30">
+                                            <a href="#  ">
+                                                <img src="{{ url_for('static', filename='img/logo/logo.png') }}" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="main-menu d-none d-lg-block">
+                                            <nav>
+                                                <ul id="navigation">
+                                                    <li>
+                                                        <a href="#"></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"></a>
+                                                    </li>
+                                                    <li>
+                                                        <h1 style="position: absolute; top: -60px;">YogaBot</h1>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#about"></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#contact"></a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="slider-area ">
+                <div class="single-sliders slider-height   d-flex align-items-center">
+                    <div class="container position-relative">
+                        <div class="row align-items-center">
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="hero-caption">
+                                    <div style="width: 300px; display: flex; justify-content: space-around;">
+                                        <button class="btn hero-btn" type="button" onclick="init()">Start</button>
+                                        <button class="btn hero-btn" type="button" onclick="stop()">Stop</button>
+                                    </div>
+                                    <div style="margin: 30px 0;">
+                                        <canvas
+                                            id="canvas"
+                                            width="300px"
+                                            height="300px"
+                                            style="background-color: #2a2635;"
+                                        ></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-shape col-xl-6 col-lg-6 col-md-6" style="display: flex; justify-content: space-around; top: 200px">
+                                <div id="label-container" style="font-size: 40px; font-weight: 600;"></div>
+                                <div style="display: flex; flex-direction: column;">
+                                    <div id="stopwatch1" style="font-size: 40px; font-weight: 600;">00:00:00</div>
+                                    <button class="btn hero-btn" type="button" onclick="" style="margin-top: 30px;"> <a href="/">Finish</a> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+            <script type="text/javascript">
+      // More API functions here:
+      // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
+
+      // the link to your model provided by Teachable Machine export panel
+      const URL = "{{ url }}";
+      let model, webcam, ctx, labelContainer, maxPredictions;
+      const timer = document.getElementById("stopwatch1");
+
+        var hr = 0;
+        var min = 0;
+        var sec = 0;
+        var stoptime = true;
+      async function init() {
+        const modelURL = URL + "model.json";
+        const metadataURL = URL + "metadata.json";
+
+        // load the model and metadata
+        // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+        // Note: the pose library adds a tmPose object to your window (window.tmPose)
+        model = await tmPose.load(modelURL, metadataURL);
+        maxPredictions = model.getTotalClasses();
+        console.log(window.flag);
+        // Convenience function to setup a webcam
+        const size = 300;
+        const flip = true; // whether to flip the webcam
+        webcam = new tmPose.Webcam(size, size, flip); // width, height, flip
+        await webcam.setup(); // request access to the webcam
+        await webcam.play();
+        window.requestAnimationFrame(loop);
+
+        // append/get elements to the DOM
+        const canvas = document.getElementById("canvas");
+        canvas.width = size;
+        canvas.height = size;
+        ctx = canvas.getContext("2d");
+        labelContainer = document.getElementById("label-container");
+        for (let i = 0; i < maxPredictions; i++) {
+          // and class labels
+          labelContainer.appendChild(document.createElement("div"));
+        }
+      }
+
+      async function loop(timestamp) {
+        webcam.update(); // update the webcam frame
+        await predict();
+        window.requestAnimationFrame(loop);
+      }
+
+      async function predict() {
+        // Prediction #1: run input through posenet
+        // estimatePose can take in an image, video or canvas html element
+        const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
+        // Prediction 2: run input through teachable machine classification model
+        const prediction = await model.predict(posenetOutput);
+
+        // const classPrediction1 = "Palming : " + prediction[0].probability.toFixed(2);
+        // labelContainer.childNodes[0].innerHTML = classPrediction1;
+
+        // const classPrediction2 = "Resting : " + prediction[1].probability.toFixed(2);
+        // labelContainer.childNodes[1].innerHTML = classPrediction2;
+        for (let i = 0; i < maxPredictions; i++) {
+          const classPrediction =
+            prediction[i].className +
+            ": " +
+            prediction[i].probability.toFixed(2);
+          labelContainer.childNodes[i].innerHTML = classPrediction;
+          console.log(classPrediction);
+        }
+        if(prediction[0].probability>0.50){
+            startTimer();
+        }
+        if(prediction[0].probability<0.50){
+            stopTimer();
+        }
+        // finally draw the poses
+        drawPose(pose);
+      }
+
+      function drawPose(pose) {
+        if (webcam.canvas) {
+          ctx.drawImage(webcam.canvas, 0, 0);
+          // draw the keypoints and skeleton
+          if (pose) {
+            const minPartConfidence = 0.5;
+            tmPose.drawKeypoints(pose.keypoints, minPartConfidence, ctx);
+            tmPose.drawSkeleton(pose.keypoints, minPartConfidence, ctx);
+          }
+        }
+      }
+      async function stop() {
+        await webcam.stop();
+        stopTimer();
+      }
+
+
+      function startTimer() {
+        if (stoptime == true) {
+          stoptime = false;
+          timerCycle();
+        }
+      }
+      function stopTimer() {
+        if (stoptime == false) {
+          stoptime = true;
+        }
+      }
+
+      function timerCycle() {
+        if (stoptime == false) {
+          sec = parseInt(sec);
+          min = parseInt(min);
+          hr = parseInt(hr);
+
+          sec = sec + 1;
+
+          if (sec == 60) {
+            min = min + 1;
+            sec = 0;
+          }
+          if (min == 60) {
+            hr = hr + 1;
+            min = 0;
+            sec = 0;
+          }
+
+          if (sec < 10 || sec == 0) {
+            sec = "0" + sec;
+          }
+          if (min < 10 || min == 0) {
+            min = "0" + min;
+          }
+          if (hr < 10 || hr == 0) {
+            hr = "0" + hr;
+          }
+
+          timer.innerHTML = hr + ":" + min + ":" + sec;
+
+          setTimeout("timerCycle()", 1000);
+        }
+      }
+
+      function resetTimer() {
+        timer.innerHTML = "00:00:00";
+      }
+            </script>
+        </body>
+    </html>

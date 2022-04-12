@@ -1,0 +1,463 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Visara-Your Health Buddy</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/icon/favicon.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome-all.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <header>
+            <div class="header-area header-transparent">
+                <div class="main-header header-sticky">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="menu-wrapper d-flex align-items-center justify-content-between">
+                                    <div class="left-content d-flex align-items-center">
+                                        <div class="logo mr-30">
+                                            <a href="#  ">
+                                                <img src="{{ url_for('static', filename='img/logo/logo.png') }}" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="main-menu d-none d-lg-block">
+                                            <nav>
+                                                <ul id="navigation">
+                                                    <li>
+                                                        <a href="#">Home</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#services">Services</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#about">About</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#contact">Contact</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="buttons">
+                                        <ul>
+                                            <li class="button-header" style="margin-right: 15px">
+                                                <a href="/login" class="header-btn2 border-btn2">
+                                                    Login
+                                                </a>
+                                            </li>
+                                            <li class="button-header">
+                                                <a href="/signup" class="header-btn2 border-btn2">
+                                                    Sign Up
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="slider-area  ">
+                <div class="single-sliders slider-height   d-flex align-items-center">
+                    <div class="container position-relative">
+                        <div class="row align-items-center">
+                            <div class="col-xl-5 col-lg-6 col-md-6">
+                                <div class="hero-caption">
+                                    <h1>We take Care of your Health</h1>
+                                    <P>Using the power of data science and artificial intelligence in the healthcare industry.</P>
+                                    <a href="#services" class="btn hero-btn">Get Started</a>
+                                </div>
+                            </div>
+                            <div class="hero-shape">
+                                <img src="{{ url_for('static', filename='img/hero/logo.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="categories-area section-padding" id="services" style="padding-top:0; padding-bottom:0;">
+                <div class="slider-area  ">
+                    <div class="single-sliders slider-height   d-flex align-items-center">
+                        <div class="container position-relative" style="top:0px">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-xl-6 col-lg-6 col-md-10">
+                                        <div class="section-tittle text-center mb-35">
+                                            <span>Our Services</span>
+                                            <h2>
+                                                Health solutions for
+                                                <br>
+                                                Young and Old
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <div class="single-cat text-center mb-50">
+                                            <div class="cat-icon">
+                                                <img style="height:100px" src="{{ url_for('static', filename='img/icon/eye.png') }}" alt="">
+                                            </div>
+                                            <div class="cat-cap">
+                                                <h5>
+                                                    <a href="#">Diabetic Retinography</a>
+                                                </h5>
+                                                <p>Prediction and Intuitive Visualisations for Diabetic Retinography.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <div class="single-cat text-center mb-50">
+                                            <div class="cat-icon">
+                                                <img style="height:100px" src="{{ url_for('static', filename='img/icon/pharmacy.png') }}" alt="">
+                                            </div>
+                                            <div class="cat-cap">
+                                                <h5>
+                                                    <a href="#">Yoga Pose Detection</a>
+                                                </h5>
+                                                <p>Your personalised Yoga bot for pose detection and tracking of your exercises.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <div class="single-cat text-center mb-50">
+                                            <div class="cat-icon">
+                                                <img style="height:100px" src="{{ url_for('static', filename='img/icon/caduceus.png') }}" alt="">
+                                            </div>
+                                            <div class="cat-cap">
+                                                <h5>
+                                                    <a href="#">Doctor Consultation</a>
+                                                </h5>
+                                                <p>A platform to take appointment and interact with the doctors.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <div class="single-cat text-center mb-50">
+                                            <div class="cat-icon">
+                                                <img style="height:100px" src="{{ url_for('static', filename='img/icon/medical-records.png') }}" alt="">
+                                            </div>
+                                            <div class="cat-cap">
+                                                <h5>
+                                                    <a href="#">Report Summariser</a>
+                                                </h5>
+                                                <p>Medical Reports can perplex common people, this feature simplifies the problem.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-xl-5 col-lg-5 col-md-10">
+                        <div class="about-img">
+                            <img src="assets/img/gallery/about1.jpg" alt="">
+                        </div>
+                        <div class="ratting-point">
+                            <div class="features-ratting">
+                                <img src="assets/img/icon/notification.svg" alt="">
+                            </div>
+                            <div class="features-caption">
+                                <h3>New Features</h3>
+                                <p>You have received notification</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6 col-md-10">
+                        <div class="about-caption mb-50">
+                            <div class="section-tittle mb-50">
+                                <h2>
+                                    Grow your
+                                    <br>
+                                    business fast.
+                                </h2>
+                            </div>
+                            <div class="single-offers mb-20">
+                                <div class="offers-cap">
+                                    <img src="assets/img/icon/notification1.svg" alt="">
+                                    <h3>
+                                        <a href="#">Engage Teammates</a>
+                                    </h3>
+                                    <p>Naxly bring the power of data science and artificial intelligence to every business.</p>
+                                </div>
+                            </div>
+                            <div class="single-offers">
+                                <div class="offers-cap">
+                                    <img src="assets/img/icon/notification1.svg" alt="">
+                                    <h3>
+                                        <a href="#">Level Up Productivity</a>
+                                    </h3>
+                                    <p>Naxly bring the power of data science and artificial intelligence to every business.</p>
+                                </div>
+                            </div>
+                            <a href="about.html" class="btn mt-20">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+        <section class="services-area2 section-padding2" id="about">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-xl-5 col-lg-5 col-md-6 col-sm-11">
+                        <div class="section-tittle section-tittle2 mb-55">
+                            <span>About</span>
+                            <h2>Health services customized for all individuals</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-6 col-sm-11">
+                        <div class="section-tittle section-tittle2 mb-55">
+                            <p>
+                                We are a team to help you analyze your health and provide customised solutions for enhance the fitness of our users.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-cat mb-30 text-center">
+                            <div class="cat-icon">
+                                <img style="height: 100px;" src="{{ url_for('static', filename='img/icon/heart-rate.png') }}" alt="">
+                            </div>
+                            <div class="cat-cap">
+                                <h5>
+                                    <a href="#">DR Prediction and Visualisation</a>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-cat mb-30 text-center">
+                            <div class="cat-icon">
+                                <img style="height:100px" src="{{ url_for('static', filename='img/icon/bandage.png') }}" alt="">
+                            </div>
+                            <div class="cat-cap">
+                                <h5>
+                                    <a href="#">Yoga Pose Tracker and Data Logger</a>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-cat mb-30 text-center">
+                            <div class="cat-icon">
+                                <img style="height:100px" src="{{ url_for('static', filename='img/icon/medical-report.png') }}" alt="">
+                            </div>
+                            <div class="cat-cap">
+                                <h5>
+                                    <a href="#">Doctor Consultation</a>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-cat mb-30 text-center">
+                            <div class="cat-icon">
+                                <img style="height:100px" src="{{ url_for('static', filename='img/icon/band-aid.png') }}" alt="">
+                            </div>
+                            <div class="cat-cap">
+                                <h5>
+                                    <a href="#">Medical Report Summariser</a>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="categories-area" id="benefits">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-6 col-md-10">
+                        <div class="section-tittle text-center mb-35">
+                            <span>Benefits</span>
+                            <h2>Why Choose Us?</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <img src="{{ url_for('static', filename='img/benefits.svg') }}" alt="">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 ls1">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <ul class="checks">
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        <p>Easy to Use</p>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        <p>Visualisation Tools</p>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        <p>Simplified View</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <ul class="checks">
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        <p>Detailed Analysis</p>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        <p>Improved Support</p>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check"></i>
+                                        <p>Intuitive Bots</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="contact">
+        <div class="footer-wrapper">
+            <div class="footer-area footer-padding">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-4 col-lg-3 col-md-6 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <div class="single-footer-caption mb-30">
+                                    <div class="footer-logo mb-35">
+                                        <a href="#">
+                                            <img src="{{ url_for('static', filename='img/logo/logo.png') }}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="footer-tittle">
+                                        <div class="footer-pera">
+                                            <p>Your personal Health Buddy.</p>
+                                        </div>
+                                    </div>
+                                    <ul class="mb-15">
+                                        <li class="number">
+                                            <a href="#">+91-8521849476</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Navigation</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#services">Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="#about">About</a>
+                                        </li>
+                                        <li>
+                                            <a href="#contact">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-2 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Services</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="#">DR Prediction</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Yoga Bot</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Doctor Consultation</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle mb-10">
+                                    <h4>Contact Us</h4>
+                                    <p>
+                                        1601, Bhaveshwar
+                                        <br>
+                                        Mumbai-400001
+                                        <br>
+                                        India
+                                    </p>
+                                </div>
+                                <div class="footer-form mb-20">
+                                    <div id="mc_embed_signup">
+                                        <div class="mt-10 info"></div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="footer-social">
+                                <a href="#">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right text-center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="back-top">
+    <a title="Go to Top" href="#">
+        <i class="fas fa-level-up-alt"></i>
+    </a>
+</div>
+<script src="{{ url_for('static', filename='js/vendor/jquery-1.12.4.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

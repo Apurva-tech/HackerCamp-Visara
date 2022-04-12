@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Visara-Your Health Buddy</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/icon/favicon.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome-all.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <header>
+            <div class="header-area header-transparent">
+                <div class="main-header header-sticky">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="menu-wrapper d-flex align-items-center justify-content-between">
+                                    <div class="left-content d-flex align-items-center">
+                                        <div class="logo mr-30">
+                                            <a href="#  ">
+                                                <img src="{{ url_for('static', filename='img/logo/logo.png') }}" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="main-menu d-none d-lg-block">
+                                            <nav>
+                                                <ul id="navigation">
+                                                    <li>
+                                                        <a href="#"></a>
+                                                    </li>
+                                                    <li></li>
+                                                    <li>
+                                                        <a href="#contact"></a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                        <h1 style="position: absolute; left: 28%; top:20px">Recommended Yogasanas</h1>
+                                    </div>
+                                    <div class="buttons">
+                                        <ul>
+                                            <li class="button-header" style="margin-right: 15px">
+                                                <a href="#" class="header-btn2 border-btn2">
+                                                    {{name}}
+                                                </a>
+                                            </li>
+                                            <li class="button-header">
+                                                <a href="/" class="header-btn2 border-btn2">
+                                                    Log Out
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="slider-area ">
+            <div class="single-sliders slider-height   d-flex align-items-center">
+                <div class="container position-relative">
+                    <div>
+                        <button style="margin:20px" class="btn hero-btn" onclick="showall()">Show All</button>
+                        <button style="margin:20px" class="btn hero-btn" onclick="recommend()">Show Recommended</button>
+                    </div>
+                    
+                    <h3 style="margin-top: 30px;">
+                        You were diagnosed with
+                        <i class="dr">{{dr}}</i>
+                    </h3>
+                    <div class="container">
+                        <div class="row" style="margin-top: 70px;">
+                            <div class="col-lg-3 col-md-6 col-sm-6 palming">
+                                <div class="single-cat text-center mb-50">
+                                    <div class="cat-icon">
+                                        <img style="height:100px" src="{{ url_for('static', filename='img/yoga.png') }}" alt="">
+                                    </div>
+                                    <div class="cat-cap">
+                                        <form action="/palming" method="POST">
+                                            <h5>
+                                                <a href="/palming">Palming</a>
+                                            </h5>
+                                        </form>
+                                        <!-- <p>Prediction and Intuitive Visualisations for Diabetic Retinography.</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6 trataka">
+                                <div class="single-cat text-center mb-50">
+                                    <div class="cat-icon">
+                                        <img style="height:100px" src="{{ url_for('static', filename='img/yoga2.png') }}" alt="">
+                                    </div>
+                                    <div class="cat-cap">
+                                        <form action="/trataka" method="POST">
+                                            <h5>
+                                                <a href="/trataka">Trataka</a>
+                                            </h5>
+                                        </form>
+                                        <!-- <p>Your personalised Yoga bot for pose detection and tracking of your exercises.</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6 bhramamudra">
+                                <div class="single-cat text-center mb-50">
+                                    <div class="cat-icon">
+                                        <img style="height:100px" src="{{ url_for('static', filename='img/meditation.png') }}" alt="">
+                                    </div>
+                                    <div class="cat-cap">
+                                        <form action="/bhramamudra" method="POST">
+                                            <h5>
+                                                <a href="/bhramamudra">Bhramamudra</a>
+                                            </h5>
+                                        </form>
+                                        <!-- <p>A platform to take appointment and interact with the doctors.</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6 pranayama">
+                                <div class="single-cat text-center mb-50">
+                                    <div class="cat-icon">
+                                        <img style="height:100px" src="{{ url_for('static', filename='img/yoga3.png') }}" alt="">
+                                    </div>
+                                    <div class="cat-cap">
+                                        <form action="/pranayama" method="POST">
+                                            <h5>
+                                                <a href="/pranayama">Pranayama</a>
+                                            </h5>
+                                        </form>
+                                        <!-- <p>Medical Reports can perplex common people, this feature simplifies the problem.</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--         
+        <form action="/parvatasana" method="POST">
+            <a href="/parvatasana">Parvatasana</a>
+        </form> -->
+    </body>
+    <script>
+        recommended=document.querySelector("h3");
+        dr=document.querySelector(".dr");
+        palming=document.querySelector(".palming");
+        trataka=document.querySelector(".trataka");
+        bhramamudra=document.querySelector(".bhramamudra");
+        pranayama=document.querySelector(".pranayama");
+        recommend()
+        function showall(){
+                palming.style.display='block';
+                trataka.style.display='block';
+                bhramamudra.style.display='block';
+                pranayama.style.display='block';
+                recommended.style.display='none';
+        }
+
+        function recommend(){
+            recommended.style.display='block';
+            if(dr.innerHTML=="NO DR")
+            {
+                trataka.style.display='none';
+                bhramamudra.style.display='none'
+                pranayama.style.display='none'
+            }
+            if(dr.innerHTML=="Mild DR")
+            {
+                bhramamudra.style.display='none'
+                pranayama.style.display='none'
+            }
+            if(dr.innerHTML=="Moderate DR")
+            {
+                palming.style.display='none'
+                pranayama.style.display='none'
+            }
+            if(dr.innerHTML=="Severe DR")
+            {
+                palming.style.display='none'
+            }
+            if(dr.innerHTML=="Pro DR")
+            {
+            }
+        }
+    </script>
+</html>
