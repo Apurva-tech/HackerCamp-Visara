@@ -2,59 +2,6 @@
 <h3 style="text-align: center;">Using the power of data science and artificial intelligence in the healthcare industry.
 </h3>
 
-
-# Important Links 
-- [Colab file for blindness in 70 months prediction](https://colab.research.google.com/drive/1ZYCiKwTzFD6Jwu2VyxBS42mLqRS1x0Mb?usp=sharing)
-- [Blindness Deployed Code(NGROK)](https://colab.research.google.com/drive/1gNqGtGATPIklXvfptHzz2-4sDzFU-k66?usp=sharing)
-  * Last Working Local Proxy Link: [Blindness Prognosis](http://c5e0d3d249fe.ngrok.io/)
-  * In case link doesn't work, follow these steps: 
-    - Upload `coxnetTR.pkl` and `coxnetUT.pkl` model files to your drive 
-    - Import these model files and run the above colab file
-- [Colab file for Diabetic retinopathy prediction](https://colab.research.google.com/drive/1Lo_kXwBiREveQ-P584Vp4HUyXm8vBmz4?usp=sharing)
-- [Diabetic-Retinopathy-Prediction(NGROK)](https://colab.research.google.com/drive/19jGOLhsaLr_ERiFcE1siSdyaGQpHxg4A?usp=sharing)
-  * To run the ngrok file, create .h5 model from [Colab file for Diabetic retinopathy prediction](https://colab.research.google.com/drive/1Lo_kXwBiREveQ-P584Vp4HUyXm8vBmz4?usp=sharing)
-  * Then follow these steps:  
-    - Upload `d5_weights.h5` model files to your drive 
-    - Import these model files and run the above colab file
-   
-<strong>  
- 
-- [Link to website](https://visara.herokuapp.com/)
-- [Demo Video](https://youtu.be/gAO9ll9_C1Y)
-
-</strong> 
-
-# Application images
-## Landing Page
-![image](https://user-images.githubusercontent.com/63183513/116790780-c2ec0080-aad3-11eb-889b-30d5e7a043a5.png)
-## Services
-![image](https://user-images.githubusercontent.com/63183513/116790786-d26b4980-aad3-11eb-8b99-c06d9e0aeb20.png)
-## Why choose us
-![image](https://user-images.githubusercontent.com/63183513/116790800-e31bbf80-aad3-11eb-938e-dd7608e19cb3.png)
-## Login
-![image](https://user-images.githubusercontent.com/63183513/116793028-ee75e780-aae1-11eb-8c89-7624e3dcbaf3.png)
-## Sign Up 
-![image](https://user-images.githubusercontent.com/63183513/116790971-d2b81480-aad4-11eb-8579-8c5df7e32ebc.png)
-## Diabetic Retinopathy Prediction
-![image](https://user-images.githubusercontent.com/63183513/116793050-03527b00-aae2-11eb-80a4-f4467d8b7fc6.png)
-![image](https://user-images.githubusercontent.com/63183513/116793052-08172f00-aae2-11eb-82c9-911b85bf2f43.png)
-## Blindness Prognosis
-![image](https://user-images.githubusercontent.com/59837325/116795427-7fed5580-aaf2-11eb-964b-4a5c2d9c720b.png)
-## Patient Dashboard
-![image](https://user-images.githubusercontent.com/59837325/116795437-a90de600-aaf2-11eb-8321-4b27acff2200.png)
-## Yoga Asanas![logo](https://user-images.githubusercontent.com/59837325/116796580-2d646700-aafb-11eb-84d3-5350e5c623a5.png)
-
-![image](https://user-images.githubusercontent.com/59837325/116795476-e5d9dd00-aaf2-11eb-9d89-d1390f5e8578.png)
-## Yoga Tracker
-![image](https://user-images.githubusercontent.com/59837325/116791146-06476e80-aad6-11eb-9ba1-e2e4ccf0d81f.png)
-## Doctor Login
-![image](https://user-images.githubusercontent.com/63183513/116793125-68a66c00-aae2-11eb-9353-2657e4b52ab3.png)
-## Doctor Dashboard
-![image](https://user-images.githubusercontent.com/63183513/116793083-3bf25480-aae2-11eb-82d9-5b9ed0c2a9b5.png)
-## Report Summarizer
-![image](https://user-images.githubusercontent.com/59837325/116795510-26d1f180-aaf3-11eb-9205-746facece0df.png)
-
-
 # Inspiration ✨
 
 Diabetes is a devastating health situation. Over 84% of sufferers are unaware that they've diabetes, and that is largely due to the fact there lacks a goal evaluation device for computerized detection. Diabetic Retinopathy is a eye situation that could purpose imaginative and prescient loss and blindness in human beings who've diabetes. Diabetic Retinopathy should be identified quickly and accurately, however, the inconsistency among clinicians exacerbates the cutting-edge negative remedy of DR. Currently, detecting DR is a totally time-ingesting task, which calls for an educated clinician to assess the retina. In addition to this, diagnosing sufferers may be extraordinarily inconsistent among ophthalmologists and our severity predictor guarantees a goal and brief evaluation of DR. To counter the adverse consequences of diabetic retinopathy and absence of consistency from clinician diagnosis, we present to you, the Visara.
@@ -121,3 +68,54 @@ Ways to generate revenue from our system:
 - Offer a service where a separate database is offered to a particular clinic so that they can monitor the situation of their clients and transfer information easily and save time for the doctor on unnecessary visits by the patients.
 
 - As we develop and optimize our product, we can provide a separate health consultancy service to help the clients stay fit through practicing yoga asanas.  
+
+# Application images
+## Landing Page
+![image](https://user-images.githubusercontent.com/59837325/162975752-d16832f2-18ae-4ebf-ab22-fbb0efde9c51.png)
+## Services
+![image](https://user-images.githubusercontent.com/59837325/162976709-49766d69-1289-4afc-9e40-4a2b50b5745a.png)
+## Why choose us
+![image](https://user-images.githubusercontent.com/59837325/162977152-e1df28c2-ca07-49c2-a74d-b36b0fa85916.png)
+## Login
+![image](https://user-images.githubusercontent.com/59837325/162977224-bd8094c7-b4b9-4b3e-9c37-a9d995fd114a.png)
+## Sign Up 
+![image](https://user-images.githubusercontent.com/59837325/162977409-3eafce9c-f3af-4329-82f7-d8587e36dcef.png)
+## Diabetic Retinopathy Prediction
+![image](https://user-images.githubusercontent.com/59837325/162977486-b04cb7c6-a9cc-4b65-8700-aaa4d569f403.png)
+![image](https://user-images.githubusercontent.com/59837325/162977557-405a93ec-954e-420e-a2f8-add0e9b87982.png)
+## Blindness Prognosis
+![image](https://user-images.githubusercontent.com/59837325/116795427-7fed5580-aaf2-11eb-964b-4a5c2d9c720b.png)
+## Patient Dashboard
+![image](https://user-images.githubusercontent.com/59837325/116795437-a90de600-aaf2-11eb-8321-4b27acff2200.png)
+## Yoga Asanas![logo](https://user-images.githubusercontent.com/59837325/116796580-2d646700-aafb-11eb-84d3-5350e5c623a5.png)
+
+![image](https://user-images.githubusercontent.com/59837325/116795476-e5d9dd00-aaf2-11eb-9d89-d1390f5e8578.png)
+## Yoga Tracker
+![image](https://user-images.githubusercontent.com/59837325/116791146-06476e80-aad6-11eb-9ba1-e2e4ccf0d81f.png)
+## Doctor Login
+![image](https://user-images.githubusercontent.com/59837325/162977779-5a70e72f-ae6a-43fd-b949-a6232552765a.png)
+## Doctor Dashboard
+![image](https://user-images.githubusercontent.com/59837325/162977866-77784b3b-2815-4ca4-adca-baf900d81b92.png)
+## Report Summarizer
+![image](https://user-images.githubusercontent.com/59837325/116795510-26d1f180-aaf3-11eb-9205-746facece0df.png)
+
+# Important Links 
+- [Colab file for blindness in 70 months prediction](https://colab.research.google.com/drive/1ZYCiKwTzFD6Jwu2VyxBS42mLqRS1x0Mb?usp=sharing)
+- [Blindness Deployed Code(NGROK)](https://colab.research.google.com/drive/1gNqGtGATPIklXvfptHzz2-4sDzFU-k66?usp=sharing)
+<!--   * Last Working Local Proxy Link: [Blindness Prognosis](http://c5e0d3d249fe.ngrok.io/) -->
+  * In case link doesn't work, follow these steps: 
+    - Upload `coxnetTR.pkl` and `coxnetUT.pkl` model files to your drive 
+    - Import these model files and run the above colab file
+- [Colab file for Diabetic retinopathy prediction](https://colab.research.google.com/drive/1Lo_kXwBiREveQ-P584Vp4HUyXm8vBmz4?usp=sharing)
+- [Diabetic-Retinopathy-Prediction(NGROK)](https://colab.research.google.com/drive/19jGOLhsaLr_ERiFcE1siSdyaGQpHxg4A?usp=sharing)
+  * To run the ngrok file, create .h5 model from [Colab file for Diabetic retinopathy prediction](https://colab.research.google.com/drive/1Lo_kXwBiREveQ-P584Vp4HUyXm8vBmz4?usp=sharing)
+  * Then follow these steps:  
+    - Upload `d5_weights.h5` model files to your drive 
+    - Import these model files and run the above colab file
+   
+<strong>  
+ 
+- [Link to website](https://visara.herokuapp.com/)
+- [Demo Video](https://drive.google.com/file/d/1ISOnZTjTtLT8dO23ZqM5Xpd4KPn4S8Oc/view?usp=sharing)
+
+</strong> 
